@@ -5,6 +5,7 @@ from .settings import (
     JWT_AUTH_SECURE,
 )
 
+
 # Kod lånad av Moments projeket - ska du behålla denna referens eller kan du skippa den?????????????????????
 @api_view()
 def root_route(request):
