@@ -44,8 +44,6 @@ ALLOWED_HOSTS = ['sarasm93-travelstoriesa-k3uhu6zmozl.ws-eu102.gitpod.io', 'trav
 # Application definition
 
 INSTALLED_APPS = [
-    'dj_rest_auth.registration',
-    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,6 +52,8 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'dj_rest_auth.registration',
+    'corsheaders',
 
 ]
 
