@@ -35,6 +35,7 @@ REST_FRAMEWORK = {
         else 'dj_rest_auth.jwt_auth.JWTCookieAuthentication'
     )], }
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -44,7 +45,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['sarasm93-travelstoriesa-k3uhu6zmozl.ws-eu102.gitpod.io', 'travel-stories-api-dfd870d3ac32.herokuapp.com']
+ALLOWED_HOSTS = ['8000-sarasm93-travelstoriesa-k3uhu6zmozl.ws-eu102.gitpod.io', 'travel-stories-api-dfd870d3ac32.herokuapp.com']
 
 # Application definition
 
