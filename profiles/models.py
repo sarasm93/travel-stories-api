@@ -17,11 +17,13 @@ class Profile(models.Model):
     def __str__(self):
         return f"Profile of {self.owner}"
 
+
 # create_profile och kopplingen under tagen från Moments API
 # Create profile automatically when a new user signs up.
 def create_profile(sender, instance, created, **kwargs):
     if created:
         Profile.objects.create(owner=instance)
+
 
 # Connect profile to user.
 post_save.connect(create_profile, sender=User)
