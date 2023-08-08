@@ -12,6 +12,13 @@
     padding-top: 85px;
 }
 
+.Content {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid #dadadf;
+}
+
 a {
     transition: color ease-in-out 0.3s;
 }
@@ -38,3 +45,26 @@ i:hover {
     transition: color ease-in-out 0.3s;
     color: #c5ecef;
 }
+
+input[type="file"] {
+    display: none;
+  }
+
+figure {
+    text-align: center;
+    display: inline-block;
+  }
+  
+  /* scrollbar */
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+  *::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

@@ -3,7 +3,11 @@
 }
 
 .NavLogo {
-    margin-right: 1vh;
+    margin-right: 2px;
+}
+
+.NavLogo span {
+    margin: 5px 0 0 10px;
 }
 
 .NavLogo:hover {

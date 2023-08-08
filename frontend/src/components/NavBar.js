@@ -13,9 +13,8 @@ const NavBar = () => {
     <Container>
         <Navbar className={styles.NavBar} expand="md" fixed="top">
             <NavLink className={styles.NavLogo} to="/">
-                <Image roundedCircle src={logo} alt="logo" height="45" />
+                <Image roundedCircle src={logo} alt="logo" height="45" /><Navbar.Brand>  Travel Stories</Navbar.Brand>
             </NavLink>
-            <Navbar.Brand>Travel Stories</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
