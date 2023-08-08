@@ -1,0 +1,36 @@
+.App {
+    font-family: Quicksand, verdana, sans-serif;
+    background-color: #f2fbf1;
+    min-height: 100vh;
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    transition: color ease-in-out 0.3s;
+}
+
+a:hover {
+    background-color: #c5ecef;
+    text-decoration: none;
+}
+
+a:hover i {
+    color: #c5ecef;
+    transition: color ease-in-out 0.3s;
+}
+
+i {
+    color: #041f02;
+    font-size: 1.6rem;
+    padding: 7px;
+    vertical-align: middle;
+}
+
+i:hover {
+    cursor: pointer;
+    transition: color ease-in-out 0.3s;
+    color: #c5ecef;
+}
