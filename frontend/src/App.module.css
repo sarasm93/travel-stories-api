@@ -1,11 +1,15 @@
 .App {
     font-family: Quicksand, verdana, sans-serif;
-    background-color: #f2fbf1;
+    background-color: #d9f1fb;
     min-height: 100vh;
   }
 
 * {
     box-sizing: border-box;
+}
+
+.Main {
+    padding-top: 85px;
 }
 
 a {
