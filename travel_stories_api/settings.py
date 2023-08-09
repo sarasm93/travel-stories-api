@@ -58,7 +58,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = 'DEBUG' in os.environ
 
 ALLOWED_HOSTS = [
-    '8000-sarasm93-travelstoriesa-k3uhu6zmozl.ws-eu102.gitpod.io', 
+    '8000-sarasm93-travelstoriesa-k3uhu6zmozl.ws-eu102.gitpod.io',
     os.environ.get('ALLOWED_HOST')]
 
 # Application definition
