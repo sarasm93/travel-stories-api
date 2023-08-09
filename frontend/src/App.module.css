@@ -29,15 +29,19 @@ a:hover {
 }
 
 a:hover i {
-    color: #c5ecef;
+    color: #4dae46;
     transition: color ease-in-out 0.3s;
 }
 
+.AddIcon:hover {
+  background-color: #ffffff;
+}
+
 i {
-    color: #041f02;
-    font-size: 1.6rem;
-    padding: 7px;
-    vertical-align: middle;
+    color: #0a7503;
+    font-size: 1.4rem;
+    padding: 5px;
+    margin-bottom: 2px;
 }
 
 i:hover {

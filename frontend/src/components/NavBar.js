@@ -3,23 +3,41 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import navStyles from "../styles/NavBar.module.css";
+import appStyles from "../App.module.css";
 import logo from "../assets/logo.png";
 import Image from 'react-bootstrap/Image';
 import { NavLink } from "react-router-dom";
-import { useCurrentUser } from '../contexts/CurrentUserContext';
+import { useCurrentUser, useSetCurrentUser } from '../contexts/CurrentUserContext';
+import Avatar from './Avatar';
+import axios from 'axios';
 
 
 const NavBar = () => {
     const currentUser = useCurrentUser();
+    const setCurrentUser = useSetCurrentUser();
 
-    const loggedInNavBar = 
+    const handleSignOut = async () => {
+        try {
+          await axios.post("dj-rest-auth/logout/");
+          setCurrentUser(null);
+        } catch (err) {
+          console.log(err);
+        }
+    };
+
+    const addStoryItem = (
+        <NavLink 
+            to="/stories/create"
+            className={`${navStyles.NavLink} ${appStyles.AddIcon}`}
+            activeClassName={navStyles.Active}
+            >
+            <i className="fa-solid fa-plus" />
+            Add story
+        </NavLink>
+    )
+
+    const loggedInNavItems = 
         <>
-            <NavLink 
-                to="/bucket"
-                className={navStyles.NavLink}
-                activeClassName={navStyles.Active}
-            >Bucket List
-            </NavLink>
             <NavLink 
                 to="/saved"
                 className={navStyles.NavLink}
@@ -27,20 +45,25 @@ const NavBar = () => {
             >Saved Stories
             </NavLink>
             <NavLink 
-                to="/logout"
+                to="/bucket"
                 className={navStyles.NavLink}
                 activeClassName={navStyles.Active}
+            >Bucket List
+            </NavLink>
+            <NavLink 
+                to="/"
+                className={navStyles.NavLink}
+                onClick={handleSignOut}
             >Log Out
             </NavLink>
             <NavLink 
-                to="/profile"
-                className={navStyles.NavLink}
-                activeClassName={navStyles.Active}
-            >Profile
+                to={`/profiles/${currentUser?.profile_id}`}
+                className={navStyles.NavLink}>        
+            <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
             </NavLink>
         </>
 
-    const loggedOutNavBar = (
+    const loggedOutNavItems = (
         <>
             <NavLink 
                 to="/login"
@@ -73,8 +96,9 @@ const NavBar = () => {
                             activeClassName={navStyles.Active}
                         >Home
                         </NavLink>
-                        {currentUser ? loggedInNavBar : loggedOutNavBar}
+                        {currentUser ? loggedInNavItems : loggedOutNavItems}
                     </Nav>
+                    {currentUser && addStoryItem}
                 </Navbar.Collapse>
             </Navbar>
         </Container>

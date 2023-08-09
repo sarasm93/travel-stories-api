@@ -33,6 +33,7 @@ function App() {
             render={() => (
               <SignUpForm />
           )}/>
+          <Route render={() => <p>Page not found!</p>} />
         </Switch>
       </Container>
     </div>
