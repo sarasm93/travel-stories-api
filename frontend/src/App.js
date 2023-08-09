@@ -4,6 +4,8 @@ import NavBar from './components/NavBar';
 import Container from 'react-bootstrap/Container';
 import { Route, Switch } from "react-router-dom";
 import SignUpForm from './pages/auth/SignUpForm';
+import SignInForm from "./pages/auth/SignInForm";
+
 
 
 function App() {
@@ -22,7 +24,7 @@ function App() {
             exact
             path="/login"
             render={() => (
-              <h1>Log In</h1>
+              <SignInForm />
           )}/>
           <Route 
             exact
