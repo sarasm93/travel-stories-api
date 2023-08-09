@@ -59,6 +59,7 @@ DEBUG = 'DEBUG' in os.environ
 
 ALLOWED_HOSTS = [
     '8000-sarasm93-travelstoriesa-k3uhu6zmozl.ws-eu102.gitpod.io',
+    'localhost',
     os.environ.get('ALLOWED_HOST')]
 
 # Application definition
@@ -69,8 +70,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
     'cloudinary',
     'rest_framework',
     'rest_framework.authtoken',
